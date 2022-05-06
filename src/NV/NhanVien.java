@@ -8,67 +8,77 @@ public class NhanVien {
         private String address;
         private int workingTimes;
         private int daysOff;
-    public NhanVien(){}
+        private Role role;
+        public NhanVien(){}
 
-    public NhanVien(String iDCard, String name, int age, String address, int workingTimes, int daysOff) {
+    public NhanVien(String iDCard, String name, int age, String address, int workingTimes, int daysOff, Role role) {
         this.iDCard = iDCard;
         this.name = name;
         this.age = age;
         this.address = address;
         this.workingTimes = workingTimes;
         this.daysOff = daysOff;
+        this.role = role;
     }
 
-        public String getiDCard() {
+    public String getiDCard() {
         return iDCard;
     }
 
-        public void setiDCard(String iDCard) {
+    public void setiDCard(String iDCard) {
         this.iDCard = iDCard;
     }
 
-        public String getName() {
+    public String getName() {
         return name;
     }
 
-        public void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-        public int getAge() {
+    public int getAge() {
         return age;
     }
 
-        public void setAge(int age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-        public String getAddress() {
+    public String getAddress() {
         return address;
     }
 
-        public void setAddress(String address) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
-        public int getWorkingTimes() {
+    public int getWorkingTimes() {
         return workingTimes;
     }
 
-        public void setWorkingTimes(int workingTimes) {
+    public void setWorkingTimes(int workingTimes) {
         this.workingTimes = workingTimes;
     }
 
-        public int getDaysOff() {
+    public int getDaysOff() {
         return daysOff;
     }
 
-        public void setDaysOff(int daysOff) {
+    public void setDaysOff(int daysOff) {
         this.daysOff = daysOff;
     }
 
-        @Override
-        public String toString() {
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    @Override
+    public String toString() {
         return "NhanVien{" +
                 "iDCard='" + iDCard + '\'' +
                 ", name='" + name + '\'' +
@@ -76,7 +86,77 @@ public class NhanVien {
                 ", address='" + address + '\'' +
                 ", workingTimes=" + workingTimes +
                 ", daysOff=" + daysOff +
+                ", role=" + role +
                 '}';
     }
+//
+//    public NhanVien(String iDCard, String name, int age, String address, int workingTimes, int daysOff) {
+//        this.iDCard = iDCard;
+//        this.name = name;
+//        this.age = age;
+//        this.address = address;
+//        this.workingTimes = workingTimes;
+//        this.daysOff = daysOff;
+//    }
+//
+//        public String getiDCard() {
+//        return iDCard;
+//    }
+//
+//        public void setiDCard(String iDCard) {
+//        this.iDCard = iDCard;
+//    }
+//
+//        public String getName() {
+//        return name;
+//    }
+//
+//        public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//        public int getAge() {
+//        return age;
+//    }
+//
+//        public void setAge(int age) {
+//        this.age = age;
+//    }
+//
+//        public String getAddress() {
+//        return address;
+//    }
+//
+//        public void setAddress(String address) {
+//        this.address = address;
+//    }
+//
+//        public int getWorkingTimes() {
+//        return workingTimes;
+//    }
+//
+//        public void setWorkingTimes(int workingTimes) {
+//        this.workingTimes = workingTimes;
+//    }
+//
+//        public int getDaysOff() {
+//        return daysOff;
+//    }
+//
+//        public void setDaysOff(int daysOff) {
+//        this.daysOff = daysOff;
+//    }
+//
+//        @Override
+//        public String toString() {
+//        return "NhanVien{" +
+//                "iDCard='" + iDCard + '\'' +
+//                ", name='" + name + '\'' +
+//                ", age=" + age +
+//                ", address='" + address + '\'' +
+//                ", workingTimes=" + workingTimes +
+//                ", daysOff=" + daysOff +
+//                '}';
+//    }
 }
 
