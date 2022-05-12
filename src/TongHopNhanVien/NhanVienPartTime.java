@@ -31,8 +31,13 @@ public class NhanVienPartTime extends NhanVienDaoTao{
 
     @Override
     public String toString() {
-        return super.toString()+"NhanVienPartTime{" +
-                "gioLamViec=" + gioLamViec +
+        return super.toString()+getTen()+"la 1 "+getGioi_tinh()+"la 1 NhanVienPartTime" +
+                "thuoc nganh"+getNganh()+
+                "lam viec o moc gio so" + gioLamViec +
+                "Co tuoi la"+getTuoi()+
+                "co email la"+getEmail()+
+                "co tuoi la"+getTuoi()+
+                "co muc luong la"+getLuong()+
                 '}';
     }
 

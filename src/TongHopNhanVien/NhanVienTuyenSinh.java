@@ -23,8 +23,11 @@ public class NhanVienTuyenSinh extends NhanVien{
 
     @Override
     public String toString() {
-        return "NhanVienTuyenSinh{" +super.toString()+
-                "soTuyenSinh=" + soTuyenSinh +
+        return getTen()+"la 1"+getGioi_tinh()+"NhanVienTuyenSinh"+"co tuoi la"+getTuoi() +super.toString()+
+                "Co sdt la"+getSdt()+
+                "Co email la "+getEmail()+
+                "soTuyenSinh=" + soTuyenSinh
+                +"co muc luong "+getLuong()+
                 '}';
     }
 

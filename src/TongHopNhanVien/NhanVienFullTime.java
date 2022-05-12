@@ -18,12 +18,12 @@ public class NhanVienFullTime extends NhanVienDaoTao {
     public String toString() {
         return super.toString()+"co ten la"
                 +getTen()
-                +getTuoi()+"Tuoi"
-                +" La 1 "+getGioi_tinh()+" Nam "
-                +" co sdt la "+getSdt()
-                +" co email la "+getEmail()
-                +" co muc luong la "+getLuong()
-                +" va thuoc ngang "+getNganh()
+                +getTuoi()+" Tuổi "
+                +" Là 1 "+getGioi_tinh()+" Nam "
+                +" có sdt là \n|"+getSdt()
+                +" có email là "+getEmail()
+                +" có mức lương là "+getLuong()
+                +" thuộc ngành "+getNganh()
                 +"\n______________________________________________________";
     }
 }

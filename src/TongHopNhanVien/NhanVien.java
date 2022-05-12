@@ -75,12 +75,12 @@ public class NhanVien {
     @Override
     public String toString() {
         return "NhanVien{" +
-                "ten='" + ten + '\'' +
-                ", tuoi=" + tuoi +
-                ", gioi_tinh='" + gioi_tinh + '\'' +
-                ", sdt='" + sdt + '\'' +
-                ", email='" + email + '\'' +
-                ", luong=" + luong +
+                "Tên='" + ten + '\'' +
+                ", có tuổi=" + tuoi +
+                ", có giới tính là ='" + gioi_tinh + '\'' +
+                ", có sdt " + sdt + '\'' +
+                ", có email " + email + '\'' +
+                ", có mức lương là =" + luong +
                 '}';
     }
 }

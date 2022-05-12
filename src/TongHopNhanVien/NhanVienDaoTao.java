@@ -22,8 +22,11 @@ public class NhanVienDaoTao extends NhanVien{
 
     @Override
     public String toString() {
-        return "NhanVienDaoTao{" +
-                "nganh='" + nganh + '\'' +
+        return getTen() +"la 1"+getGioi_tinh()+" NhanVienDaoTao{" +
+                "thuoc nganh='" + nganh +
+                "co tuoi la "+getTuoi()+
+                "co email"+getEmail()+
+                "va co muc luong la" +getLuong()+'\'' +
                 '}';
     }
 }

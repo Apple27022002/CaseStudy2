@@ -5,10 +5,7 @@ import TongHopNhanVien.NhanVienFullTime;
 import TongHopNhanVien.NhanVienPartTime;
 import TongHopNhanVien.NhanVienTuyenSinh;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 
 public class QLNV {
     public static void addNhanVien(){
@@ -86,10 +83,36 @@ public class QLNV {
     }
 
     public static void sortByName(){/////Chức Năng 5
-        list.sort(Comparator.comparing(o->((NhanVien)o).getTen()));
+        Collections.sort(list, new Comparator<NhanVien>() {
+            @Override
+            public int compare(NhanVien o1, NhanVien o2) {
+                int a =o1.getTen().compareToIgnoreCase(o2.getTen());
+                    if (a==0){
+                        int b=o1.getTen().compareToIgnoreCase(o2.getTen());
+                        return b;
+                }
+                    return a;
+            }
+        });
     }
+
+//        list.sort(Comparator.comparing(o->((NhanVien)o).getTen()));
     public static void sortByDoanhThu(){//Chức Năng 6
-        list.sort(Comparator.comparing(o->((NhanVien)o).doanhThu()));
+//        list.sort(Comparator.comparing(o->((NhanVien)o).doanhThu()));
+        Collections.sort(list, new Comparator<NhanVien>() {
+            @Override
+            public int compare(NhanVien o1, NhanVien o2) {
+               if(o1.doanhThu()< o2.doanhThu()){
+                   return -1;
+               }
+               else if(o1.doanhThu()>o2.doanhThu()){
+                   return 1;
+               }
+               else {
+                   return 0;
+               }
+            }
+        });
     }
     public static void showNhanVien(){//Chức Năng 7
         for (NhanVien nhanvien:list) {
