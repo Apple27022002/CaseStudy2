@@ -1,9 +1,9 @@
-package TongHopNhanVien;
+package tonghopnhanvien;
 
 public class NhanVien {
     private String ten;
     private int tuoi;
-    private String gioi_tinh;
+    private String gioiTinh;
     private String sdt;
     private String email;
     private double luong;
@@ -11,10 +11,10 @@ public class NhanVien {
     public NhanVien() {
     }
 
-    public NhanVien(String ten, int tuoi, String gioi_tinh, String sdt, String email, double luong) {
+    public NhanVien(String ten, int tuoi, String gioiTinh, String sdt, String email, double luong) {
         this.ten = ten;
         this.tuoi = tuoi;
-        this.gioi_tinh = gioi_tinh;
+        this.gioiTinh = gioiTinh;
         this.sdt = sdt;
         this.email = email;
         this.luong = luong;
@@ -36,12 +36,12 @@ public class NhanVien {
         this.tuoi = tuoi;
     }
 
-    public String getGioi_tinh() {
-        return gioi_tinh;
+    public String getGioiTinh() {
+        return gioiTinh;
     }
 
-    public void setGioi_tinh(String gioi_tinh) {
-        this.gioi_tinh = gioi_tinh;
+    public void setGioiTinh(String gioiTinh) {
+        this.gioiTinh = gioiTinh;
     }
 
     public String getSdt() {
@@ -77,10 +77,10 @@ public class NhanVien {
         return "Nhân viên " +
                 "Tên='" + ten + '\'' +
                 ", có tuổi=" + tuoi +
-                ", có giới tính là ='" + gioi_tinh + '\'' +
+                ", có giới tính là ='" + gioiTinh + '\'' +
                 ", có sdt " + sdt + '\'' +
                 ", có email " + email + '\'' +
-                ", có mức lương là =" + luong +
+                ", có mức lương là = " + luong +
                 '}';
     }
 }

@@ -1,4 +1,4 @@
-package TongHopNhanVien;
+package tonghopnhanvien;
 
 public class NhanVienTuyenSinh extends NhanVien{
     private int soTuyenSinh;
@@ -6,8 +6,8 @@ public class NhanVienTuyenSinh extends NhanVien{
     public NhanVienTuyenSinh() {
     }
 
-    public NhanVienTuyenSinh(String ten, int tuoi, String gioi_tinh, String sdt, String email, double luong) {
-        super(ten, tuoi, gioi_tinh, sdt, email, luong);
+    public NhanVienTuyenSinh(String ten, int tuoi, String gioiTinh, String sdt, String email, double luong) {
+        super(ten, tuoi, gioiTinh, sdt, email, luong);
     }
 
     public NhanVienTuyenSinh(String nhapTen, int nhapTuoiNhanVien, String nhapGioiTinh, String nhapSDT, String nhapEmail, double nhapLuong, int nhapSoTuyenSinh) {
@@ -23,7 +23,7 @@ public class NhanVienTuyenSinh extends NhanVien{
 
     @Override
     public String toString() {
-        return getTen()+"là 1"+getGioi_tinh()+"Nhân viên tuyển sinh"+getTuoi()+" tuổi " +super.toString()+
+        return getTen()+"là 1"+ getGioiTinh()+"Nhân viên tuyển sinh"+getTuoi()+" tuổi " +super.toString()+
                 "Có sđt là :"+getSdt()+
                 "Có email là : "+getEmail()+
                 "số người đã tuyển là" + soTuyenSinh

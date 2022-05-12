@@ -1,12 +1,12 @@
-package TongHopNhanVien;
+package tonghopnhanvien;
 
 public class NhanVienFullTime extends NhanVienDaoTao {
     public NhanVienFullTime(String nganh) {
         super(nganh);
     }
 
-    public NhanVienFullTime(String ten, int tuoi, String gioi_tinh, String sdt, String email, double luong, String nganh) {
-        super(ten, tuoi, gioi_tinh, sdt, email, luong, nganh);
+    public NhanVienFullTime(String ten, int tuoi, String gioiTinh, String sdt, String email, double luong, String nganh) {
+        super(ten, tuoi, gioiTinh, sdt, email, luong, nganh);
     }
 
     @Override
@@ -19,11 +19,11 @@ public class NhanVienFullTime extends NhanVienDaoTao {
         return super.toString()+"co ten la"
                 +getTen()
                 +getTuoi()+" Tuổi "
-                +" Là 1 "+getGioi_tinh()+" Nam "
+                +" Là 1 "+ getGioiTinh()+" Nam "
                 +" có sdt là \n|"+getSdt()
                 +" có email là "+getEmail()
                 +" có mức lương là "+getLuong()
-                +" thuộc ngành "+getNganh()
+                +" thuộc ngành  "+getNganh()
                 +"\n______________________________________________________";
     }
 }

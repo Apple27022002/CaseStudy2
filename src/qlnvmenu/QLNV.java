@@ -1,9 +1,9 @@
-package QLVNsMenu;
+package qlnvmenu;
 
-import TongHopNhanVien.NhanVien;
-import TongHopNhanVien.NhanVienFullTime;
-import TongHopNhanVien.NhanVienPartTime;
-import TongHopNhanVien.NhanVienTuyenSinh;
+import tonghopnhanvien.NhanVien;
+import tonghopnhanvien.NhanVienFullTime;
+import tonghopnhanvien.NhanVienPartTime;
+import tonghopnhanvien.NhanVienTuyenSinh;
 
 import java.util.*;
 
@@ -17,7 +17,13 @@ public class QLNV {
             System.out.println("|___________________________________|");
             System.out.println("|  3.Thoát                          |");
             System.out.println("_____________________________________");
-            int choice = Integer.parseInt(sc.nextLine());
+            int choice=-1;
+            try {
+                choice= sc.nextInt();
+            }catch (InputMismatchException e){
+                System.out.println("nhap lai deeeeee");
+                sc.nextLine();
+            }
             switch (choice){
                 case 1:
                     addNhanVienDaoTao();
@@ -36,8 +42,14 @@ public class QLNV {
             System.out.println("2.Xóa nhân viên tuyển sinh");
             System.out.println("_____________________________________");
             System.out.println("3.Thoát");
-            int choice = Integer.parseInt(sc.nextLine());
-            switch (choice){
+            int choice = -1;
+          try {
+              choice= sc.nextInt();
+          }catch (InputMismatchException e){
+              System.out.println("nhap lai deeeeee");
+              sc.nextLine();
+          }
+                switch (choice){
                 case 1:
                     removeNhanVienDaotao();
                     break;
@@ -80,22 +92,24 @@ public class QLNV {
         for (NhanVien nhanvien:list) {
             if (nhanvien.getTen().equals(nameFind)){
                 System.out.println(nhanvien);
+                System.out.println("Hãy lựa tiếp" );
             }
         }
     }
 
     public static void sortByName(){/////Chức Năng 5
-        Collections.sort(list, new Comparator<NhanVien>() {
-            @Override
-            public int compare(NhanVien o1, NhanVien o2) {
-                int a =o1.getTen().compareToIgnoreCase(o2.getTen());
-                    if (a==0){
-                        int b=o1.getTen().compareToIgnoreCase(o2.getTen());
-                        return b;
-                }
-                    return a;
-            }
-        });
+        System.out.println("Tính năng đang bảo trì ! Vui lòng lựa tính năng khác");
+//        Collections.sort(list, new Comparator<NhanVien>() {
+//            @Override
+//            public int compare(NhanVien o1, NhanVien o2) {
+//                int a =o1.getTen().compareToIgnoreCase(o2.getTen());
+//                    if (a==0){
+//                        int b=o1.getTen().compareToIgnoreCase(o2.getTen());
+//                        return b;
+//                }
+//                    return a;
+//            }
+//        });
     }
 
 //        list.sort(Comparator.comparing(o->((NhanVien)o).getTen()));
@@ -125,6 +139,7 @@ public class QLNV {
     static Scanner sc= new Scanner(System.in);
     public static String nhapTen(){
         System.out.println("Nhập tên nhân viên");
+        sc.nextLine();
         String ten=sc.nextLine();
         return ten;
     }
@@ -196,10 +211,7 @@ public class QLNV {
                 System.out.println("! Ngành chỉ có thể là đầu bếp phục vụ hoặc chạy bàn !\n! Vui lòng nhập lại !");
             }
         }
-//        System.out.println("Nhập ngành");
-//        String nganh = sc.nextLine();
-//
-//        return nganh;
+
     }
     public static int nhapSoTuyenSinh(){
         System.out.println("Nhập số tuyển sinh được");
@@ -210,18 +222,21 @@ public class QLNV {
         while (true){
             try {
             System.out.println("Nhập giờ làm việc : ca 1-6h\uD83D\uDC49 8h :ca 2 -10h \uD83D\uDC49 14h:ca 3 16h\uD83D\uDC49 20h ️");
-            double gio_lam_viec=Double.parseDouble(sc.nextLine());
+            double gio_lam_viec=sc.nextInt();
             if (gio_lam_viec==1|| gio_lam_viec==2||gio_lam_viec==3)return gio_lam_viec;
-            else throw new InputMismatchException();}
-            catch (InputMismatchException e){
+            } catch (InputMismatchException e){
                 System.out.println("Vui lòng nhập lại ca làm ");
+                sc.nextLine();
             }
 
-
+//            try {
+//                choice= sc.nextInt();
+//            }catch (InputMismatchException e){
+//                System.out.println("nhap lai deeeeee");
+//                sc.nextLine();
+//            }
         }
-//        System.out.println("Nhập giờ làm việc");
-//        double gio_lam_viec=Double.parseDouble(sc.nextLine());
-//        return gio_lam_viec;
+
     }
 //    Phuong Thuc Them Nhan Vien-Cách hoạt động chức năng 2////////////////////
     //PART
@@ -248,7 +263,13 @@ public class QLNV {
             System.out.println("|___________________________________|");
             System.out.println("|   3.Thoát                         |");
             System.out.println("_____________________________________");
-            int choice=Integer.parseInt(sc.nextLine());
+            int choice=-1;
+            try {
+                choice= sc.nextInt();
+            }catch (InputMismatchException e){
+                System.out.println("nhap lai deeeeee");
+                sc.nextLine();
+            }
             switch (choice){
                 case 1:
                     addNhanVienFullTime();
@@ -261,26 +282,7 @@ public class QLNV {
             }if (choice==3) break;
         }
     }
-//    public static void addNhanVien(){
-//        while (true){
-//            System.out.println("1.Thêm nhân viên đào tạo");
-//            System.out.println("_____________________________________");
-//            System.out.println("2.Thêm nhân viên tuyển sinh");
-//            System.out.println("_____________________________________");
-//            System.out.println("3.Thoát");
-//            int choice = Integer.parseInt(sc.nextLine());
-//            switch (choice){
-//                case 1:
-//                    addNhanVienDaoTao();
-//                    break;
-//                case 2:
-//                    addNhanVienTuyenSinh();
-//                    break;
-//                case 3:
-//                    break;
-//            }if (choice==3) break;
-//        }
-//    }
+
 //    Phuong thuc xoa
     public static void removeNhanVienDaotao(){
         System.out.println("Nhập tên nhân viên cần đuổi");
@@ -308,56 +310,6 @@ public class QLNV {
         }if (check==0) System.out.println("Không có người này tronng danh sách nhân viên \n Xin vui lòng lựa lại");
 
     }
-////    Phuong Thuc hien tien luong-Chức Năng 3----
-//    public static void showDoanhThu(){
-//        System.out.println("Nhập tên");
-//        String nameDoanhThu=sc.nextLine();
-//        for (int i = 0; i < list.size(); i++) {
-//            if (list.get(i).getTen().equals(nameDoanhThu)){
-//                System.out.println("Doanh thu của " + nameDoanhThu+" là "+ list.get(i).doanhThu());
-//            }
-//        }
-//    }
-////    Phuong thuc tim kiem-Chức Năng 4
-//    public static void findNhanVienByName(){
-//        System.out.println("Nhập tên nhân viên cần tìm");
-//        String nameFind=sc.nextLine();
-//        for (NhanVien nhanvien:list) {
-//            if (nhanvien.getTen().equals(nameFind)){
-//                System.out.println(nhanvien);
-//            }
-//        }
-////    }
-//    public static void sortByName(){
-//        list.sort(Comparator.comparing(o->((NhanVien)o).getTen()));
-//    }
-//    public static void sortByDoanhThu(){
-//        list.sort(Comparator.comparing(o->((NhanVien)o).doanhThu()));
-//    }
-//    public static void showNhanVien(){
-//        for (NhanVien nhanvien:list) {
-//            System.out.println(nhanvien);
-//        }
-//    }//Chức Năng 2
-//    public static void removeNhanVien(){
-//        while (true){System.out.println("1.Xóa nhân viên đào tạo");
-//            System.out.println("_____________________________________");
-//            System.out.println("2.Xóa nhân viên tuyển sinh");
-//            System.out.println("_____________________________________");
-//            System.out.println("3.Thoát");
-//            int choice = Integer.parseInt(sc.nextLine());
-//            switch (choice){
-//                case 1:
-//                    removeNhanVienDaotao();
-//                    break;
-//                case 2:
-//                    removeNhanVienTuyenSinh();
-//                    break;
-//                case 3:
-//                    break;
-//            }if (choice==3) break;
-//        }
-//    }
     public static void menu(){
         while (true){
             System.out.println("_______________________________________");

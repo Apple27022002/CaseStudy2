@@ -1,9 +1,7 @@
-package System;
+package system;
 
-import QLVNsMenu.QLNV;
+import qlnvmenu.QLNV;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -20,9 +18,9 @@ public class Main {
             System.out.println("==                                              ==");
             System.out.println("=================2.Đăng kí========================");
             System.out.println("==                                              ==");
-            System.out.println("==================0.Thoát=========================");
+            System.out.println("=================0.Thoát==========================");
             System.out.println("==                                              ==");
-            System.out.println("=====================Nhập lựa chon================");
+            System.out.println("=================Nhập lựa chon====================");
             try {
                 choice = scanner.nextInt();
 //      bắt ngoại lệ1
@@ -43,19 +41,6 @@ public class Main {
                         QLNV.menu();
                         break;
                     }
-//        String userName ="Manh2002";
-//        String password ="2702";
-//        boolean checkLogin=false;
-//        do {
-//            System.out.println("Nhap tai khoan:");
-//            String usn=scanner.nextLine();
-//            System.out.println("Nhap mat khau :");
-//            String pw=scanner.nextLine();
-//           if (usn.equals(userName)&&pw.equals(password)){
-//               System.out.println("Dang nhap thanh cong");
-//               checkLogin=true;
-//           }else System.out.println("Sai cmnr");
-//        }while (!checkLogin);
 
 
 
