@@ -74,7 +74,7 @@ public class NhanVien {
 
     @Override
     public String toString() {
-        return "NhanVien{" +
+        return "Nhân viên " +
                 "Tên='" + ten + '\'' +
                 ", có tuổi=" + tuoi +
                 ", có giới tính là ='" + gioi_tinh + '\'' +

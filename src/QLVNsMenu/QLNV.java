@@ -10,11 +10,13 @@ import java.util.*;
 public class QLNV {
     public static void addNhanVien(){
         while (true){
-            System.out.println("1.Thêm nhân viên đào tạo");
             System.out.println("_____________________________________");
-            System.out.println("2.Thêm nhân viên tuyển sinh");
+            System.out.println("|  1.Thêm nhân viên đào tạo         |");
+            System.out.println("|___________________________________|");
+            System.out.println("|  2.Thêm nhân viên tuyển sinh      |");
+            System.out.println("|___________________________________|");
+            System.out.println("|  3.Thoát                          |");
             System.out.println("_____________________________________");
-            System.out.println("3.Thoát");
             int choice = Integer.parseInt(sc.nextLine());
             switch (choice){
                 case 1:
@@ -54,7 +56,7 @@ public class QLNV {
         String nameDoanhThu = sc.nextLine();
         int khongCo = qlnv.timKiemTheoTen(nameDoanhThu);
         if (khongCo == -1) {
-            System.out.println("khong co ten nay");
+            System.out.println("!Tên không tồn tại!");
         } else {
             for (int i = 0; i < list.size(); i++) {
                 if (list.get(i).getTen().equals(nameDoanhThu)) {
@@ -139,10 +141,10 @@ public class QLNV {
                 else return tuoi;
             }
             catch (InputMismatchException e){
-                System.out.println("Tuổi phải là số lớn hơn 18");
+                System.out.println("! Tuổi phải là số lớn hơn 18 !");
             }
             catch (Exception e){
-                System.out.println("Tuổi phải là số lớn hơn 18");
+                System.out.println("! Tuổi phải là số lớn hơn 18 !");
             }
         }
     }
@@ -159,7 +161,7 @@ public class QLNV {
                 return email;
             }
             catch (InputMismatchException e){
-                System.out.println("Email này đã có rồi , mời nhập email khác");
+                System.out.println(" Email này đã có rồi , mời nhập lại email khác ");
             }
         }
     }
@@ -180,7 +182,7 @@ public class QLNV {
                 if (gender.equals("Nam") || gender.equals("Nu")) return gender;
                 else throw new InputMismatchException();}
             catch (InputMismatchException e){
-                System.out.println("Giới tình chỉ có thể là Nam hoặc Nữ");
+                System.out.println("! Giới tình chỉ có thể là Nam hoặc Nữ !");
             }
         }
     }
@@ -191,7 +193,7 @@ public class QLNV {
                 if (nganh.equals("Dau Bep")|| nganh.equals("Phuc Vu") ||nganh.equals("Chay Ban"))return nganh;
                 else throw new InputMismatchException();}
             catch (InputMismatchException e){
-                System.out.println("Ngành chỉ có thể là đầu bếp phục vụ hoặc chạy bàn");
+                System.out.println("! Ngành chỉ có thể là đầu bếp phục vụ hoặc chạy bàn !\n! Vui lòng nhập lại !");
             }
         }
 //        System.out.println("Nhập ngành");
@@ -212,7 +214,7 @@ public class QLNV {
             if (gio_lam_viec==1|| gio_lam_viec==2||gio_lam_viec==3)return gio_lam_viec;
             else throw new InputMismatchException();}
             catch (InputMismatchException e){
-                System.out.println("Vui long nhap lai gio lam");
+                System.out.println("Vui lòng nhập lại ca làm ");
             }
 
 
@@ -239,11 +241,13 @@ public class QLNV {
     }
     public static void addNhanVienDaoTao(){
         while (true){
-            System.out.println("1.Thêm nhân viên full time");
             System.out.println("_____________________________________");
-            System.out.println("2.Thêm nhân viên parttime");
+            System.out.println("|   1.Thêm nhân viên full time      |");
+            System.out.println("|___________________________________|");
+            System.out.println("|   2.Thêm nhân viên parttime       |");
+            System.out.println("|___________________________________|");
+            System.out.println("|   3.Thoát                         |");
             System.out.println("_____________________________________");
-            System.out.println("3.Thoát");
             int choice=Integer.parseInt(sc.nextLine());
             switch (choice){
                 case 1:
@@ -279,7 +283,7 @@ public class QLNV {
 //    }
 //    Phuong thuc xoa
     public static void removeNhanVienDaotao(){
-        System.out.println("Nhập tên cần đuổi");
+        System.out.println("Nhập tên nhân viên cần đuổi");
         String nameRemove=sc.nextLine();
         int check=0;
         for (int i = 0; i < list.size(); i++) {
@@ -288,10 +292,10 @@ public class QLNV {
                 i--;
                 check++;
             }
-        }if (check==0) System.out.println("Không có người này trong danh sách nhân viên này \n xin vui lòng lựa lại" );
+        }if (check==0) System.out.println("Không có người này trong danh sách nhân viên này \n Xin vui lòng lựa lại" );
     }
     public static void removeNhanVienTuyenSinh(){
-        System.out.println("Nhập tên nhân viên bạn cần đuổi");
+        System.out.println("Nhập vào tên nhân viên bạn cần đuổi");
         String nameRemove=sc.nextLine();
         int check=0;
         for (int i = 0; i < list.size(); i++) {
@@ -299,7 +303,7 @@ public class QLNV {
                 list.remove(i);
                 i--;
                 check++;
-                System.out.println("đã đuổi việc");
+                System.out.println("! Đã bị đuổi việc !");
             }
         }if (check==0) System.out.println("Không có người này tronng danh sách nhân viên \n Xin vui lòng lựa lại");
 
@@ -356,23 +360,23 @@ public class QLNV {
 //    }
     public static void menu(){
         while (true){
-            System.out.println("_____________________________________");
-            System.out.println("1.Thêm nhân viên");
-            System.out.println("_____________________________________");
-            System.out.println("2.Đuổi nhân viên");
-            System.out.println("_____________________________________");
-            System.out.println("3.Hiển thị doanh thu nhân viên");
-            System.out.println("_____________________________________");
-            System.out.println("4.Tìm kiếm nhân viên");
-            System.out.println("_____________________________________");
-            System.out.println("5.Sắp xếp nhân viên theo tên");
-            System.out.println("_____________________________________");
-            System.out.println("6.Sắp xếp nhân viên theo doanh thu");
-            System.out.println("_____________________________________");
-            System.out.println("7.Hiển thị toàn bộ nhân viên");
-            System.out.println("_____________________________________");
-            System.out.println("8.Thoát");
-            System.out.println("_____________________________________");
+            System.out.println("_______________________________________");
+            System.out.println("|   1.Thêm nhân viên                  |");
+            System.out.println("_______________________________________");
+            System.out.println("|   2.Đuổi nhân viên                  |");
+            System.out.println("_______________________________________");
+            System.out.println("|   3.Hiển thị doanh thu nhân viên    |");
+            System.out.println("_______________________________________");
+            System.out.println("|   4.Tìm kiếm nhân viên              |");
+            System.out.println("_______________________________________");
+            System.out.println("|   5.Sắp xếp nhân viên theo tên      |");
+            System.out.println("_______________________________________");
+            System.out.println("|   6.Sắp xếp nhân viên theo doanh thu|");
+            System.out.println("_______________________________________");
+            System.out.println("|   7.Hiển thị toàn bộ nhân viên      |");
+            System.out.println("_______________________________________");
+            System.out.println("|   8.Thoát                           |");
+            System.out.println("_______________________________________");
             int choice = -1;
             try {
                 choice = Integer.parseInt(sc.nextLine());
@@ -405,7 +409,7 @@ public class QLNV {
                     System.exit(0);
                     break;
                 default:
-                    System.err.println("Số vừa nhập không hợp ");
+                    System.err.println("! Số vừa nhập không hợp!");
                     continue;
             }
         }

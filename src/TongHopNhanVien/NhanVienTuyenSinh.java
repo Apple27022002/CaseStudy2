@@ -23,11 +23,11 @@ public class NhanVienTuyenSinh extends NhanVien{
 
     @Override
     public String toString() {
-        return getTen()+"la 1"+getGioi_tinh()+"NhanVienTuyenSinh"+"co tuoi la"+getTuoi() +super.toString()+
-                "Co sdt la"+getSdt()+
-                "Co email la "+getEmail()+
-                "soTuyenSinh=" + soTuyenSinh
-                +"co muc luong "+getLuong()+
+        return getTen()+"là 1"+getGioi_tinh()+"Nhân viên tuyển sinh"+getTuoi()+" tuổi " +super.toString()+
+                "Có sđt là :"+getSdt()+
+                "Có email là : "+getEmail()+
+                "số người đã tuyển là" + soTuyenSinh
+                +"có mức lương = "+getLuong()+
                 '}';
     }
 

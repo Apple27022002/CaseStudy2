@@ -22,11 +22,11 @@ public class NhanVienDaoTao extends NhanVien{
 
     @Override
     public String toString() {
-        return getTen() +"la 1"+getGioi_tinh()+" NhanVienDaoTao{" +
-                "thuoc nganh='" + nganh +
-                "co tuoi la "+getTuoi()+
-                "co email"+getEmail()+
-                "va co muc luong la" +getLuong()+'\'' +
+        return getTen() +"là 1"+getGioi_tinh()+" Nhân viên đào tạo" +
+                "thuộc ngành:'" + nganh +
+                "có tuổi là"+getTuoi()+
+                "có email"+getEmail()+
+                "và có mức lương =" +getLuong()+'\'' +
                 '}';
     }
 }

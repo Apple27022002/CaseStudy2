@@ -31,13 +31,13 @@ public class NhanVienPartTime extends NhanVienDaoTao{
 
     @Override
     public String toString() {
-        return super.toString()+getTen()+"la 1 "+getGioi_tinh()+"la 1 NhanVienPartTime" +
-                "thuoc nganh"+getNganh()+
-                "lam viec o moc gio so" + gioLamViec +
-                "Co tuoi la"+getTuoi()+
-                "co email la"+getEmail()+
-                "co tuoi la"+getTuoi()+
-                "co muc luong la"+getLuong()+
+        return super.toString()+getTen()+"là 1 "+getGioi_tinh()+" nhân viên PartTime" +
+                "thuộc ngành"+getNganh()+
+                "làm ở mốc giờ " + gioLamViec +
+                "ở độ tuổi "+getTuoi()+
+                " có email là "+getEmail()+
+                "có mức lương ="+getLuong()+
+                "\n ca 1-6h->10h, ca 2 12h->16h,ca 3 17h->22h"+
                 '}';
     }
 
